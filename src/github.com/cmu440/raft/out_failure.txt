@@ -1,0 +1,172 @@
+==================== 5 SERVERS ====================
+Test (2B): basic agreement
+Start called on Server 1 with command= 100
+Start called on Server 2 with command= 100
+Start called on Server 3 with command= 100
+Start called on Server 4 with command= 100
+Start called on Server 0 with command= 100
+Start called on Server 1 with command= 100
+Start called on Server 2 with command= 100
+Start called on Server 3 with command= 100
+Start called on Server 4 with command= 100
+Start called on Server 0 with command= 100
+Start called on Server 1 with command= 100
+Start called on Server 2 with command= 100
+Start called on Server 3 with command= 100
+Start called on Server 4 with command= 100
+Start called on Server 0 with command= 100
+Start called on Server 1 with command= 100
+Start called on Server 2 with command= 100
+Start called on Server 3 with command= 100
+Start called on Server 4 with command= 100
+Start called on Server 0 with command= 100
+Start called on Server 1 with command= 100
+Start called on Server 2 with command= 100
+Start called on Server 3 with command= 100
+Start called on Server 4 with command= 100
+Start called on Server 0 with command= 100
+Server 0 timed out, follower -> candidate
+peer 1 pushed &{0 1 true} into votesCh
+Server 0 popped VoteGranted =  true from votesCh
+Server 0 popped VoteGranted =  true from votesCh
+Server 0 candidate -> leader ....................................
+peer 2 pushed &{0 1 true} into votesCh
+Start called on Server 1 with command= 100
+Start called on Server 2 with command= 100
+Start called on Server 3 with command= 100
+Start called on Server 4 with command= 100
+Start called on Server 0 with command= 100
+Server 0 entered DoAgreement ***********************************
+Server 0 sent append entry to Peer = 1
+Server 0 sent append entry to Peer = 2
+Server 0 sent append entry to Peer = 3
+Server 0 sent append entry to Peer = 4
+Server 2 applying entry to log...
+Server 1 applying entry to log...
+Server 2 committed command=  100 to log
+Server 1 committed command=  100 to log
+Server 3 applying entry to log...
+Server 3 committed command=  100 to log
+Server 2 's log is now =  [&{<nil> -1} &{100 1} ] lastApplied =  1 commitIndex =  1 Term =  1
+Server 1 's log is now =  [&{<nil> -1} &{100 1} ] lastApplied =  1 commitIndex =  1 Term =  1
+Server 3 's log is now =  [&{<nil> -1} &{100 1} ] lastApplied =  1 commitIndex =  1 Term =  1
+Server 4 applying entry to log...
+Server 4 committed command=  100 to log
+Server 4 's log is now =  [&{<nil> -1} &{100 1} ] lastApplied =  1 commitIndex =  1 Term =  1
+Start called on Server 1 with command= 100
+Start called on Server 2 with command= 100
+Start called on Server 3 with command= 100
+Start called on Server 4 with command= 100
+Start called on Server 0 with command= 100
+Server 0 entered DoAgreement ***********************************
+Server 0 sent append entry to Peer = 1
+Server 0 sent append entry to Peer = 2
+Server 0 sent append entry to Peer = 3
+Server 0 sent append entry to Peer = 4
+Server 1 applying entry to log...
+Server 2 applying entry to log...
+Server 3 applying entry to log...
+Server 1 committed command=  100 to log
+Server 2 committed command=  100 to log
+Server 3 committed command=  100 to log
+Server 4 applying entry to log...
+Server 1 's log is now =  [&{<nil> -1} &{100 1} &{100 1} ] lastApplied =  1 commitIndex =  2 Term =  1
+Server 4 committed command=  100 to log
+Server 2 's log is now =  [&{<nil> -1} &{100 1} &{100 1} ] lastApplied =  1 commitIndex =  2 Term =  1
+Server 3 's log is now =  [&{<nil> -1} &{100 1} &{100 1} ] lastApplied =  1 commitIndex =  2 Term =  1
+Server 4 's log is now =  [&{<nil> -1} &{100 1} &{100 1} ] lastApplied =  1 commitIndex =  2 Term =  1
+Server 0 received a majority of success=true from other servers, going to commit and apply to state machine
+Server 0 committed command=  100 to log
+Server 0 's log is now =  [&{<nil> -1} &{100 1} ] lastApplied =  1 commitIndex =  1 Term =  1
+Server 0 applying ApplyMsg =  {1 100} to state machine
+Server 1 applying ApplyMsg =  {1 100} to state machine
+Server 2 applying ApplyMsg =  {1 100} to state machine
+Server 3 applying ApplyMsg =  {1 100} to state machine
+Server 4 applying ApplyMsg =  {1 100} to state machine
+Start called on Server 1 with command= 200
+Start called on Server 2 with command= 200
+Start called on Server 3 with command= 200
+Start called on Server 4 with command= 200
+Start called on Server 0 with command= 200
+Server 0 entered DoAgreement ***********************************
+Server 0 sent append entry to Peer = 1
+Server 0 sent append entry to Peer = 2
+Server 0 sent append entry to Peer = 3
+Server 0 sent append entry to Peer = 4
+Server 1 applying entry to log...
+Server 1 committed command=  200 to log
+Server 1 's log is now =  [&{<nil> -1} &{100 1} &{100 1} &{200 1} ] lastApplied =  2 commitIndex =  2 Term =  1
+Server 2 applying entry to log...
+Server 3 applying entry to log...
+Server 2 committed command=  200 to log
+Server 3 committed command=  200 to log
+Server 2 's log is now =  [&{<nil> -1} &{100 1} &{100 1} &{200 1} ] lastApplied =  2 commitIndex =  2 Term =  1
+Server 3 's log is now =  [&{<nil> -1} &{100 1} &{100 1} &{200 1} ] lastApplied =  2 commitIndex =  2 Term =  1
+Server 4 applying entry to log...
+Server 4 committed command=  200 to log
+Server 4 's log is now =  [&{<nil> -1} &{100 1} &{100 1} &{200 1} ] lastApplied =  2 commitIndex =  2 Term =  1
+Start called on Server 1 with command= 200
+Start called on Server 2 with command= 200
+Start called on Server 3 with command= 200
+Start called on Server 4 with command= 200
+Start called on Server 0 with command= 200
+Server 0 entered DoAgreement ***********************************
+Server 0 sent append entry to Peer = 1
+Server 0 sent append entry to Peer = 2
+Server 0 sent append entry to Peer = 3
+Server 0 sent append entry to Peer = 4
+Server 1 applying entry to log...
+Server 2 applying entry to log...
+Server 1 committed command=  200 to log
+Server 2 committed command=  200 to log
+Server 1 's log is now =  [&{<nil> -1} &{100 1} &{100 1} &{200 1} &{200 1} ] lastApplied =  2 commitIndex =  3 Term =  1
+Server 3 applying entry to log...
+Server 2 's log is now =  [&{<nil> -1} &{100 1} &{100 1} &{200 1} &{200 1} ] lastApplied =  2 commitIndex =  3 Term =  1
+Server 3 committed command=  200 to log
+Server 4 applying entry to log...
+Server 4 committed command=  200 to log
+Server 3 's log is now =  [&{<nil> -1} &{100 1} &{100 1} &{200 1} &{200 1} ] lastApplied =  2 commitIndex =  3 Term =  1
+Server 4 's log is now =  [&{<nil> -1} &{100 1} &{100 1} &{200 1} &{200 1} ] lastApplied =  2 commitIndex =  3 Term =  1
+Server 0 received a majority of success=true from other servers, going to commit and apply to state machine
+Server 0 committed command=  100 to log
+Server 0 's log is now =  [&{<nil> -1} &{100 1} &{100 1} ] lastApplied =  2 commitIndex =  2 Term =  1
+Server 0 applying ApplyMsg =  {2 100} to state machine
+Server 1 applying ApplyMsg =  {2 100} to state machine
+Server 2 applying ApplyMsg =  {2 100} to state machine
+Server 3 applying ApplyMsg =  {2 100} to state machine
+Server 4 applying ApplyMsg =  {2 100} to state machine
+Start called on Server 1 with command= 200
+Start called on Server 2 with command= 200
+Start called on Server 3 with command= 200
+Start called on Server 4 with command= 200
+Start called on Server 0 with command= 200
+Server 0 entered DoAgreement ***********************************
+Server 0 sent append entry to Peer = 1
+Server 0 sent append entry to Peer = 2
+Server 0 sent append entry to Peer = 3
+Server 0 sent append entry to Peer = 4
+Server 1 applying entry to log...
+Server 1 committed command=  200 to log
+Server 2 applying entry to log...
+Server 1 's log is now =  [&{<nil> -1} &{100 1} &{100 1} &{200 1} &{200 1} &{200 1} ] lastApplied =  3 commitIndex =  3 Term =  1
+Server 2 committed command=  200 to log
+Server 3 applying entry to log...
+Server 3 committed command=  200 to log
+Server 2 's log is now =  [&{<nil> -1} &{100 1} &{100 1} &{200 1} &{200 1} &{200 1} ] lastApplied =  3 commitIndex =  3 Term =  1
+Server 3 's log is now =  [&{<nil> -1} &{100 1} &{100 1} &{200 1} &{200 1} &{200 1} ] lastApplied =  3 commitIndex =  3 Term =  1
+Server 4 applying entry to log...
+Server 4 committed command=  200 to log
+Server 4 's log is now =  [&{<nil> -1} &{100 1} &{100 1} &{200 1} &{200 1} &{200 1} ] lastApplied =  3 commitIndex =  3 Term =  1
+Server 0 received a majority of success=true from other servers, going to commit and apply to state machine
+Server 0 committed command=  200 to log
+Server 0 's log is now =  [&{<nil> -1} &{100 1} &{100 1} &{200 1} ] lastApplied =  3 commitIndex =  3 Term =  1
+Server 0 applying ApplyMsg =  {3 200} to state machine
+Server 1 applying ApplyMsg =  {3 200} to state machine
+Server 2 applying ApplyMsg =  {3 200} to state machine
+Server 3 applying ApplyMsg =  {3 200} to state machine
+Server 4 applying ApplyMsg =  {3 200} to state machine
+--- FAIL: TestBasicAgree2B (6.39s)
+	raft_test.go:127: Got index 3 but expected 2
+FAIL
+exit status 1
+FAIL	github.com/cmu440/raft	6.420s

@@ -1,0 +1,467 @@
+TestCount2BHidden
+==================== 3 SERVERS ====================
+Hidden Test (2B): RPC counts aren't too high
+Server 1 timed out, follower -> candidate updating cur term from  0 to 1
+Server 1 sent votes out with args =  &{1 1 0 -1}
+peer 2 pushed &{0 1 true} into votesCh
+Server 1 candidate -> leader ....................................
+Server 1 log is =  [&{<nil> -1} ] commit index =  0
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 0]
+Server 0 has log =  [&{<nil> -1} ] last applied =  0  commit index =  0
+Server 0 log is now =  [&{<nil> -1} ] commitIndex =  0
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 0]
+Server 2 has log =  [&{<nil> -1} ] last applied =  0  commit index =  0
+Server 2 log is now =  [&{<nil> -1} ] commitIndex =  0
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 0]
+Server 0 has log =  [&{<nil> -1} ] last applied =  0  commit index =  0
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 0]
+Server 0 log is now =  [&{<nil> -1} ] commitIndex =  0
+Server 2 has log =  [&{<nil> -1} ] last applied =  0  commit index =  0
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 log is now =  [&{<nil> -1} ] commitIndex =  0
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 0]
+Server 0 has log =  [&{<nil> -1} ] last applied =  0  commit index =  0
+Server 0 log is now =  [&{<nil> -1} ] commitIndex =  0
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 0]
+Server 2 has log =  [&{<nil> -1} ] last applied =  0  commit index =  0
+Server 2 log is now =  [&{<nil> -1} ] commitIndex =  0
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 0]
+Server 2 has log =  [&{<nil> -1} ] last applied =  0  commit index =  0
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 0]
+Server 2 log is now =  [&{<nil> -1} ] commitIndex =  0
+Server 0 has log =  [&{<nil> -1} ] last applied =  0  commit index =  0
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 log is now =  [&{<nil> -1} ] commitIndex =  0
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 0]
+Server 0 has log =  [&{<nil> -1} ] last applied =  0  commit index =  0
+Server 0 log is now =  [&{<nil> -1} ] commitIndex =  0
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 0]
+Server 2 has log =  [&{<nil> -1} ] last applied =  0  commit index =  0
+Server 2 log is now =  [&{<nil> -1} ] commitIndex =  0
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 0]
+Server 0 has log =  [&{<nil> -1} ] last applied =  0  commit index =  0
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 0]
+Server 0 log is now =  [&{<nil> -1} ] commitIndex =  0
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 has log =  [&{<nil> -1} ] last applied =  0  commit index =  0
+Server 2 log is now =  [&{<nil> -1} ] commitIndex =  0
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 0]
+Server 0 has log =  [&{<nil> -1} ] last applied =  0  commit index =  0
+Server 0 log is now =  [&{<nil> -1} ] commitIndex =  0
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 0]
+Server 2 has log =  [&{<nil> -1} ] last applied =  0  commit index =  0
+Server 2 log is now =  [&{<nil> -1} ] commitIndex =  0
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 0]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 0]
+Server 0 has log =  [&{<nil> -1} ] last applied =  0  commit index =  0
+Server 2 has log =  [&{<nil> -1} ] last applied =  0  commit index =  0
+Server 0 log is now =  [&{<nil> -1} ] commitIndex =  0
+Server 2 log is now =  [&{<nil> -1} ] commitIndex =  0
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 0]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 0]
+Server 0 has log =  [&{<nil> -1} ] last applied =  0  commit index =  0
+Server 2 has log =  [&{<nil> -1} ] last applied =  0  commit index =  0
+Server 0 log is now =  [&{<nil> -1} ] commitIndex =  0
+Server 2 log is now =  [&{<nil> -1} ] commitIndex =  0
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 0]
+Server 0 has log =  [&{<nil> -1} ] last applied =  0  commit index =  0
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 0]
+Server 0 log is now =  [&{<nil> -1} ] commitIndex =  0
+Server 2 has log =  [&{<nil> -1} ] last applied =  0  commit index =  0
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 log is now =  [&{<nil> -1} ] commitIndex =  0
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 0]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 0]
+Server 0 has log =  [&{<nil> -1} ] last applied =  0  commit index =  0
+Server 2 has log =  [&{<nil> -1} ] last applied =  0  commit index =  0
+Server 0 log is now =  [&{<nil> -1} ] commitIndex =  0
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 log is now =  [&{<nil> -1} ] commitIndex =  0
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 0]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 0]
+Server 0 has log =  [&{<nil> -1} ] last applied =  0  commit index =  0
+Server 2 has log =  [&{<nil> -1} ] last applied =  0  commit index =  0
+Server 0 log is now =  [&{<nil> -1} ] commitIndex =  0
+Server 2 log is now =  [&{<nil> -1} ] commitIndex =  0
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 0]
+Server 0 has log =  [&{<nil> -1} ] last applied =  0  commit index =  0
+Server 0 log is now =  [&{<nil> -1} ] commitIndex =  0
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 0]
+Server 2 has log =  [&{<nil> -1} ] last applied =  0  commit index =  0
+Server 2 log is now =  [&{<nil> -1} ] commitIndex =  0
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 0]
+Server 0 has log =  [&{<nil> -1} ] last applied =  0  commit index =  0
+Server 0 log is now =  [&{<nil> -1} ] commitIndex =  0
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 0]
+Server 2 has log =  [&{<nil> -1} ] last applied =  0  commit index =  0
+Server 2 log is now =  [&{<nil> -1} ] commitIndex =  0
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Start called on Server 1 with command= 1
+Start called on Server 1 with command= 683024728
+Start called on Server 1 with command= 1006933274
+Start called on Server 1 with command= 607811211
+Start called on Server 1 with command= 629431445
+Start called on Server 1 with command= 1458323237
+Server 1 entered DoAgreement with command 1  ***********************************, log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} ] commitIndex =  0
+Server 1 entered DoAgreement with command 1458323237  ***********************************, log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} ] commitIndex =  0
+Server 1 entered DoAgreement with command 607811211  ***********************************, log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} ] commitIndex =  0
+Server 1 sending appending entries to Server 0 with PrevLogIndex =  0
+Server 1 entered DoAgreement with command 683024728  ***********************************, log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} ] commitIndex =  0
+Start called on Server 1 with command= 469339106
+Start called on Server 1 with command= 436340495
+Start called on Server 1 with command= 774965466
+Start called on Server 1 with command= 1225511528
+Start called on Server 1 with command= 1852186258
+Start called on Server 1 with command= 629458047
+Server 1 entered DoAgreement with command 1006933274  ***********************************, log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} ] commitIndex =  0
+Server 1 sending appending entries to Server 0 with PrevLogIndex =  0
+Server 1 sending appending entries to Server 0 with PrevLogIndex =  0
+Server 1 sending appending entries to Server 0 with PrevLogIndex =  0
+Server 1 sending appending entries to Server 2 with PrevLogIndex =  0
+Server 1 entered DoAgreement with command 629458047  ***********************************, log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  0
+Server 1 sending appending entries to Server 0 with PrevLogIndex =  0
+Server 1 sending appending entries to Server 2 with PrevLogIndex =  0
+Server 1 sending appending entries to Server 2 with PrevLogIndex =  0
+Server 1 sending appending entries to Server 2 with PrevLogIndex =  0
+Server 1 entered DoAgreement with command 469339106  ***********************************, log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  0
+Server 1 sending appending entries to Server 0 with PrevLogIndex =  0
+Server 1 sending appending entries to Server 2 with PrevLogIndex =  0
+Server 1 entered DoAgreement with command 629431445  ***********************************, log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  0
+Server 1 sending appending entries to Server 0 with PrevLogIndex =  0
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = -1, Entries = [&{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ], LeaderCommit = 0]
+Server 2 has log =  [&{<nil> -1} ] last applied =  0  commit index =  0
+Server 1 sending appending entries to Server 2 with PrevLogIndex =  0
+Server 2 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  0
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = -1, Entries = [&{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} ], LeaderCommit = 0]
+Server 0 has log =  [&{<nil> -1} ] last applied =  0  commit index =  0
+Server 0 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} ] commitIndex =  0
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 for command =  1  popped reply= &{1 true 2 false} from appendEntriesCh for command =  1
+Server 1 received a majority of success=true from other servers, going to commit command =  1  and apply to state machine
+Server 1 commit index incremented from 0 to 1
+Server 1 Exiting DoAgreement for command =  1  commit index =  6 log is =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = -1, Entries = [&{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ], LeaderCommit = 0]
+Server 2 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  0  commit index =  0
+Server 1 entered DoAgreement with command 436340495  ***********************************, log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  6
+Server 1 sending appending entries to Server 0 with PrevLogIndex =  0
+Server 2 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  0
+Server 1 sending appending entries to Server 2 with PrevLogIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = -1, Entries = [&{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} ], LeaderCommit = 0]
+Server 0 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} ] last applied =  0  commit index =  0
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = -1, Entries = [&{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ], LeaderCommit = 0]
+Server 2 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  0  commit index =  0
+Server 2 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  0
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 for command =  1458323237  popped reply= &{1 true 2 false} from appendEntriesCh for command =  1458323237
+Server 1 received a majority of success=true from other servers, going to commit command =  1458323237  and apply to state machine
+Server 1 commit index incremented from 6 to 7
+Server 1 for command =  469339106  popped reply= &{1 true 2 false} from appendEntriesCh for command =  469339106
+Server 1 received a majority of success=true from other servers, going to commit command =  469339106  and apply to state machine
+Server 1 commit index incremented from 6 to 7
+Server 1 Exiting DoAgreement for command =  1458323237  commit index =  6 log is =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ]
+Server 1 Exiting DoAgreement for command =  469339106  commit index =  12 log is =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = -1, Entries = [&{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ], LeaderCommit = 0]
+Server 0 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} ] last applied =  0  commit index =  0
+Server 1 entered DoAgreement with command 774965466  ***********************************, log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 1 sending appending entries to Server 0 with PrevLogIndex =  0
+Server 0 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  0
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 sending appending entries to Server 2 with PrevLogIndex =  3
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = -1, Entries = [&{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ], LeaderCommit = 0]
+Server 0 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  0  commit index =  0
+Server 0 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  0
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = -1, Entries = [&{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ], LeaderCommit = 0]
+Server 2 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  0  commit index =  0
+Server 2 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  0
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 for command =  1006933274  popped reply= &{1 true 0 false} from appendEntriesCh for command =  1006933274
+Server 1 received a majority of success=true from other servers, going to commit command =  1006933274  and apply to state machine
+Server 1 Exiting DoAgreement for command =  1006933274  commit index =  12 log is =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ]
+Server 1 for command =  629458047  popped reply= &{1 true 0 false} from appendEntriesCh for command =  629458047
+Server 1 received a majority of success=true from other servers, going to commit command =  629458047  and apply to state machine
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = -1, Entries = [&{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ], LeaderCommit = 0]
+Server 1 Exiting DoAgreement for command =  629458047  commit index =  12 log is =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ]
+Server 2 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  0  commit index =  0
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = -1, Entries = [&{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ], LeaderCommit = 0]
+Server 2 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  0
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = -1, Entries = [&{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ], LeaderCommit = 12]
+Server 2 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  0  commit index =  0
+Server 0 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  0
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  0  commit index =  0
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = -1, Entries = [&{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ], LeaderCommit = 0]
+Server 0 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  0
+Server 0 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  0  commit index =  0
+Server 0 updated commit index from 0 to 12
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 sending appending entries to Server 0 with PrevLogIndex =  2
+Server 1 sending appending entries to Server 2 with PrevLogIndex =  3
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = -1, Entries = [&{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ], LeaderCommit = 0]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = -1, Entries = [&{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ], LeaderCommit = 6]
+Server 0 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  0  commit index =  12
+Server 2 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  0
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  0  commit index =  12
+Server 0 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 1 for command =  774965466  popped reply= &{1 true 0 false} from appendEntriesCh for command =  774965466
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 received a majority of success=true from other servers, going to commit command =  774965466  and apply to state machine
+Server 1 entered DoAgreement with command 1225511528  ***********************************, log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 1 sending appending entries to Server 0 with PrevLogIndex =  3
+Server 1 sending appending entries to Server 2 with PrevLogIndex =  3
+Server 1 Exiting DoAgreement for command =  774965466  commit index =  12 log is =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ]
+Server 1 for command =  629431445  popped reply= &{1 true 2 false} from appendEntriesCh for command =  629431445
+Server 1 received a majority of success=true from other servers, going to commit command =  629431445  and apply to state machine
+Server 1 Exiting DoAgreement for command =  629431445  commit index =  12 log is =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ]
+Server 0 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 1, PrevLogTerm = 1, Entries = [&{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ], LeaderCommit = 6]
+Server 2 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  0  commit index =  0
+Server 2 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  0
+Server 0 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 1 in DoRulesForAllServers, lastApplied = 1 log= [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] rf.commitIndex =  12
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 applied ApplyMsg =  {1 1} to state machine
+Server 2 updated commit index from 0 to 6
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 3, PrevLogTerm = 1, Entries = [&{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ], LeaderCommit = 12]
+Server 1 for command =  436340495  popped reply= &{1 true 0 false} from appendEntriesCh for command =  436340495
+Server 2 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  0  commit index =  6
+Server 1 received a majority of success=true from other servers, going to commit command =  436340495  and apply to state machine
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 3, PrevLogTerm = 1, Entries = [&{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ], LeaderCommit = 12]
+Server 2 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  6
+Server 2 updated commit index from 6 to 12
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 Exiting DoAgreement for command =  436340495  commit index =  12 log is =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 2, PrevLogTerm = 1, Entries = [&{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ], LeaderCommit = 12]
+Server 1 for command =  1225511528  popped reply= &{1 true 2 false} from appendEntriesCh for command =  1225511528
+Server 1 received a majority of success=true from other servers, going to commit command =  1225511528  and apply to state machine
+Server 0 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  0  commit index =  12
+Server 1 Exiting DoAgreement for command =  1225511528  commit index =  12 log is =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ]
+Server 1 sending appending entries to Server 2 with PrevLogIndex =  5
+Server 1 entered DoAgreement with command 1852186258  ***********************************, log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 1 sending appending entries to Server 0 with PrevLogIndex =  4
+Server 0 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 sending appending entries to Server 2 with PrevLogIndex =  5
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 3, PrevLogTerm = 1, Entries = [&{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ], LeaderCommit = 12]
+Server 0 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  0  commit index =  12
+Server 1 for command =  683024728  popped reply= &{1 true 0 false} from appendEntriesCh for command =  683024728
+Server 1 received a majority of success=true from other servers, going to commit command =  683024728  and apply to state machine
+Server 2 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  0  commit index =  12
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 12]
+Server 0 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  0  commit index =  12
+Server 2 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 5, PrevLogTerm = 1, Entries = [&{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ], LeaderCommit = 12]
+Server 2 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  0  commit index =  12
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = -1, Entries = [&{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} ], LeaderCommit = 0]
+Server 0 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  0  commit index =  12
+Server 1 Exiting DoAgreement for command =  683024728  commit index =  12 log is =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 4, PrevLogTerm = 1, Entries = [&{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ], LeaderCommit = 12]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 3, PrevLogTerm = 1, Entries = [&{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ], LeaderCommit = 12]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 12]
+Server 2 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  0  commit index =  12
+Server 0 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  0  commit index =  12
+Server 2 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 5, PrevLogTerm = 1, Entries = [&{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ], LeaderCommit = 12]
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 2 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  0  commit index =  12
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  0  commit index =  12
+Server 0 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 for command =  607811211  popped reply= &{1 true 0 false} from appendEntriesCh for command =  607811211
+Server 1 received a majority of success=true from other servers, going to commit command =  607811211  and apply to state machine
+Server 2 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 1 Exiting DoAgreement for command =  607811211  commit index =  12 log is =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 for command =  1852186258  popped reply= &{1 true 0 false} from appendEntriesCh for command =  1852186258
+Server 1 received a majority of success=true from other servers, going to commit command =  1852186258  and apply to state machine
+Server 2 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 Exiting DoAgreement for command =  1852186258  commit index =  12 log is =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ]
+Server 0 in DoRulesForAllServers, lastApplied = 1 log= [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] rf.commitIndex =  12
+Server 2 in DoRulesForAllServers, lastApplied = 1 log= [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] rf.commitIndex =  12
+Server 0 applied ApplyMsg =  {1 1} to state machine
+Server 2 applied ApplyMsg =  {1 1} to state machine
+Server 1 in DoRulesForAllServers, lastApplied = 2 log= [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] rf.commitIndex =  12
+Server 1 applied ApplyMsg =  {2 683024728} to state machine
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 12]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 12]
+Server 0 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  1  commit index =  12
+Server 2 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  1  commit index =  12
+Server 0 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 2 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 in DoRulesForAllServers, lastApplied = 2 log= [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] rf.commitIndex =  12
+Server 2 applied ApplyMsg =  {2 683024728} to state machine
+Server 0 in DoRulesForAllServers, lastApplied = 2 log= [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] rf.commitIndex =  12
+Server 0 applied ApplyMsg =  {2 683024728} to state machine
+Server 1 in DoRulesForAllServers, lastApplied = 3 log= [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] rf.commitIndex =  12
+Server 1 applied ApplyMsg =  {3 1006933274} to state machine
+Server 2 in DoRulesForAllServers, lastApplied = 3 log= [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] rf.commitIndex =  12
+Server 0 in DoRulesForAllServers, lastApplied = 3 log= [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] rf.commitIndex =  12
+Server 2 applied ApplyMsg =  {3 1006933274} to state machine
+Server 0 applied ApplyMsg =  {3 1006933274} to state machine
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 12]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 12]
+Server 0 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  3  commit index =  12
+Server 0 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 2 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  3  commit index =  12
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 in DoRulesForAllServers, lastApplied = 4 log= [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] rf.commitIndex =  12
+Server 1 applied ApplyMsg =  {4 607811211} to state machine
+Server 0 in DoRulesForAllServers, lastApplied = 4 log= [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] rf.commitIndex =  12
+Server 2 in DoRulesForAllServers, lastApplied = 4 log= [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] rf.commitIndex =  12
+Server 0 applied ApplyMsg =  {4 607811211} to state machine
+Server 2 applied ApplyMsg =  {4 607811211} to state machine
+Server 1 in DoRulesForAllServers, lastApplied = 5 log= [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] rf.commitIndex =  12
+Server 1 applied ApplyMsg =  {5 629431445} to state machine
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 12]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 12]
+Server 0 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  4  commit index =  12
+Server 2 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  4  commit index =  12
+Server 0 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 2 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 in DoRulesForAllServers, lastApplied = 5 log= [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] rf.commitIndex =  12
+Server 0 in DoRulesForAllServers, lastApplied = 5 log= [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] rf.commitIndex =  12
+Server 2 applied ApplyMsg =  {5 629431445} to state machine
+Server 0 applied ApplyMsg =  {5 629431445} to state machine
+Server 1 in DoRulesForAllServers, lastApplied = 6 log= [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] rf.commitIndex =  12
+Server 1 applied ApplyMsg =  {6 1458323237} to state machine
+Server 2 in DoRulesForAllServers, lastApplied = 6 log= [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] rf.commitIndex =  12
+Server 0 in DoRulesForAllServers, lastApplied = 6 log= [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] rf.commitIndex =  12
+Server 2 applied ApplyMsg =  {6 1458323237} to state machine
+Server 0 applied ApplyMsg =  {6 1458323237} to state machine
+Server 1 in DoRulesForAllServers, lastApplied = 7 log= [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] rf.commitIndex =  12
+Server 1 applied ApplyMsg =  {7 469339106} to state machine
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 12]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 12]
+Server 0 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  6  commit index =  12
+Server 2 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  6  commit index =  12
+Server 0 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 12]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 12]
+Server 0 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  6  commit index =  12
+Server 2 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  6  commit index =  12
+Server 0 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 in DoRulesForAllServers, lastApplied = 7 log= [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] rf.commitIndex =  12
+Server 0 in DoRulesForAllServers, lastApplied = 7 log= [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] rf.commitIndex =  12
+Server 2 applied ApplyMsg =  {7 469339106} to state machine
+Server 0 applied ApplyMsg =  {7 469339106} to state machine
+Server 1 in DoRulesForAllServers, lastApplied = 8 log= [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] rf.commitIndex =  12
+Server 1 applied ApplyMsg =  {8 436340495} to state machine
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 12]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 12]
+Server 0 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  7  commit index =  12
+Server 2 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  7  commit index =  12
+Server 0 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 12]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 12]
+Server 0 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  7  commit index =  12
+Server 2 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  7  commit index =  12
+Server 0 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 in DoRulesForAllServers, lastApplied = 8 log= [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] rf.commitIndex =  12
+Server 2 applied ApplyMsg =  {8 436340495} to state machine
+Server 0 in DoRulesForAllServers, lastApplied = 8 log= [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] rf.commitIndex =  12
+Server 0 applied ApplyMsg =  {8 436340495} to state machine
+Server 1 in DoRulesForAllServers, lastApplied = 9 log= [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] rf.commitIndex =  12
+Server 1 applied ApplyMsg =  {9 774965466} to state machine
+Server 0 in DoRulesForAllServers, lastApplied = 9 log= [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] rf.commitIndex =  12
+Server 2 in DoRulesForAllServers, lastApplied = 9 log= [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] rf.commitIndex =  12
+Server 0 applied ApplyMsg =  {9 774965466} to state machine
+Server 2 applied ApplyMsg =  {9 774965466} to state machine
+Server 1 in DoRulesForAllServers, lastApplied = 10 log= [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] rf.commitIndex =  12
+Server 1 applied ApplyMsg =  {10 1225511528} to state machine
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 12]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 12]
+Server 2 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  9  commit index =  12
+Server 0 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  9  commit index =  12
+Server 2 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 in DoRulesForAllServers, lastApplied = 10 log= [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] rf.commitIndex =  12
+Server 0 in DoRulesForAllServers, lastApplied = 10 log= [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] rf.commitIndex =  12
+Server 2 applied ApplyMsg =  {10 1225511528} to state machine
+Server 0 applied ApplyMsg =  {10 1225511528} to state machine
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 12]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 12]
+Server 0 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  10  commit index =  12
+Server 2 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  10  commit index =  12
+Server 0 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 in DoRulesForAllServers, lastApplied = 11 log= [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] rf.commitIndex =  12
+Server 1 applied ApplyMsg =  {11 1852186258} to state machine
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 12]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 1, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 12]
+Server 0 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  10  commit index =  12
+Server 2 has log =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] last applied =  10  commit index =  12
+Server 0 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 log is now =  [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] commitIndex =  12
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 in DoRulesForAllServers, lastApplied = 11 log= [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] rf.commitIndex =  12
+Server 2 in DoRulesForAllServers, lastApplied = 11 log= [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] rf.commitIndex =  12
+Server 0 applied ApplyMsg =  {11 1852186258} to state machine
+Server 2 applied ApplyMsg =  {11 1852186258} to state machine
+Server 1 in DoRulesForAllServers, lastApplied = 12 log= [&{<nil> -1} &{1 1} &{683024728 1} &{1006933274 1} &{607811211 1} &{629431445 1} &{1458323237 1} &{469339106 1} &{436340495 1} &{774965466 1} &{1225511528 1} &{1852186258 1} &{629458047 1} ] rf.commitIndex =  12
+Server 1 applied ApplyMsg =  {12 629458047} to state machine
+--- FAIL: TestCount2BHidden (1.60s)
+	raft_test.go:802: too many RPCs (46) for 10 entries
+FAIL
+exit status 1
+FAIL	github.com/cmu440/raft	1.620s

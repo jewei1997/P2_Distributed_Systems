@@ -1,0 +1,10 @@
+0000000000000000000000000000000000000000 e94824a79bd0cbe787172b8d1d600786b5892c5e Jeremy Wei <jtwei@andrew.cmu.edu> 1540954079 -0400	clone: from https://github.com/CMU-440-F18/P2.git
+e94824a79bd0cbe787172b8d1d600786b5892c5e 199e72cc185a7bf4da8ecc42d67d1b77961c3789 Jeremy Wei <jtwei@andrew.cmu.edu> 1540995532 -0400	commit: Added State fields from extended Raft paper
+199e72cc185a7bf4da8ecc42d67d1b77961c3789 f1c2fe81f6f8f4d9136ad596445cce952b0601f3 Jeremy Wei <jtwei@andrew.cmu.edu> 1541458109 -0500	commit: just a place to save work
+f1c2fe81f6f8f4d9136ad596445cce952b0601f3 ce1fb56092b0357eb9d407d9d12411a88a72c6ed Jeremy Wei <jtwei@andrew.cmu.edu> 1541469347 -0500	commit: 16 pts
+ce1fb56092b0357eb9d407d9d12411a88a72c6ed 0ec907305d17f7c411e51040038bb1776ba52734 Jeremy Wei <jtwei@andrew.cmu.edu> 1541746910 -0500	commit: finished checkpoint
+0ec907305d17f7c411e51040038bb1776ba52734 d9dfe07bfcc2d1f02cddfa7936f4d3c4ed04f997 Jeremy Wei <jtwei@andrew.cmu.edu> 1541901582 -0500	commit: Passing TestBasicAgree2B now
+d9dfe07bfcc2d1f02cddfa7936f4d3c4ed04f997 8d2f45475a20b56212d44203d8b8459743e6bf82 Jeremy Wei <jtwei@andrew.cmu.edu> 1542132948 -0500	commit: passsing 2A and TestBasicAgree
+8d2f45475a20b56212d44203d8b8459743e6bf82 c53fac001be4fb99a497459c94ae47621b5fd205 Jeremy Wei <jtwei@andrew.cmu.edu> 1542151208 -0500	commit: Passing 2A, TestBasicAgree, TestFailAgree
+c53fac001be4fb99a497459c94ae47621b5fd205 0e63297c9286a642a8aea7b2ddd1ac3674a8ea09 Jeremy Wei <jtwei@andrew.cmu.edu> 1542153534 -0500	commit: Actually passes 2A, TestBasicAgree, TestBasicFail
+0e63297c9286a642a8aea7b2ddd1ac3674a8ea09 c49176a96344a21ee0bb52470609d081787b24db Jeremy Wei <jtwei@andrew.cmu.edu> 1542232161 -0500	commit: Passing 2A, TestBasicAgree, TestFailAgree, TestNoFailAgree

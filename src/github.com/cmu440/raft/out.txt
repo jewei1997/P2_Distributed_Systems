@@ -1,0 +1,451 @@
+==================== 3 SERVERS ====================
+Test (2B): agreement despite 
+follower disconnection
+Start called on Server 1 with command= 101
+Start called on Server 2 with command= 101
+Start called on Server 0 with command= 101
+Start called on Server 1 with command= 101
+Start called on Server 2 with command= 101
+Start called on Server 0 with command= 101
+Start called on Server 1 with command= 101
+Start called on Server 2 with command= 101
+Start called on Server 0 with command= 101
+Start called on Server 1 with command= 101
+Start called on Server 2 with command= 101
+Start called on Server 0 with command= 101
+Start called on Server 1 with command= 101
+Start called on Server 2 with command= 101
+Start called on Server 0 with command= 101
+Start called on Server 1 with command= 101
+Start called on Server 2 with command= 101
+Start called on Server 0 with command= 101
+Start called on Server 1 with command= 101
+Start called on Server 2 with command= 101
+Start called on Server 0 with command= 101
+Server 0 timed out, follower -> candidate updating cur term from  0 to 1
+Server 0 sent votes out with args =  &{1 0 0 0}
+Server 0 candidate -> leader ....................................
+peer 2 pushed &{0 1 true} into votesCh
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 0
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 0
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 0]
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 0]
+Server 2 has log =  [&{<nil> -1} ]
+Server 1 has log =  [&{<nil> -1} ]
+Server 2 log is now =  [&{<nil> -1} ]
+Server 1 log is now =  [&{<nil> -1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Start called on Server 1 with command= 101
+Start called on Server 2 with command= 101
+Start called on Server 0 with command= 101
+Server 0 entered DoAgreement with command 101  ***********************************
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = -1, Entries = [&{101 1} ], LeaderCommit = 0]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = -1, Entries = [&{101 1} ], LeaderCommit = 0]
+Server 1 has log =  [&{<nil> -1} ]
+Server 2 has log =  [&{<nil> -1} ]
+Server 1 log is now =  [&{<nil> -1} &{101 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} ]
+Server 1 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 popped reply= &{1 true 1} from appendEntriesCh for command =  101
+Server 0 received a majority of success=true from other servers, going to commit and apply to state machine
+Server 0 commit index incremented from 0 to 1
+Server 0 popped reply= &{1 true 2} from appendEntriesCh for command =  101
+Server 0 exiting DoAgreement for command= 101
+Server 0 in DoRulesForAllServers, lastApplied = 1 log= [&{<nil> -1} &{101 1} ] rf.commitIndex =  1
+Server 0 applied ApplyMsg =  {1 101} to state machine
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 1
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 1
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{101 1} ]
+Server 1 log is now =  [&{<nil> -1} &{101 1} ]
+Server 1 updated commit index from 0 to 1
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 has log =  [&{<nil> -1} &{101 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} ]
+Server 2 updated commit index from 0 to 1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 in DoRulesForAllServers, lastApplied = 1 log= [&{<nil> -1} &{101 1} ] rf.commitIndex =  1
+Server 1 applied ApplyMsg =  {1 101} to state machine
+Server 2 in DoRulesForAllServers, lastApplied = 1 log= [&{<nil> -1} &{101 1} ] rf.commitIndex =  1
+Server 2 applied ApplyMsg =  {1 101} to state machine
+Checking one leader
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 1
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 1
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{101 1} ]
+Server 2 has log =  [&{<nil> -1} &{101 1} ]
+Server 1 log is now =  [&{<nil> -1} &{101 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 1
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 1
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{101 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{101 1} ]
+Server 1 log is now =  [&{<nil> -1} &{101 1} ]
+Server 1 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 1
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 1
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{101 1} ]
+Server 2 has log =  [&{<nil> -1} &{101 1} ]
+Server 1 log is now =  [&{<nil> -1} &{101 1} ]
+Server 1 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 log is now =  [&{<nil> -1} &{101 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 1
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 1
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{101 1} ]
+Server 1 log is now =  [&{<nil> -1} &{101 1} ]
+Server 1 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{101 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 1
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 1
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{101 1} ]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 log is now =  [&{<nil> -1} &{101 1} ]
+Server 2 has log =  [&{<nil> -1} &{101 1} ]
+Server 1 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 log is now =  [&{<nil> -1} &{101 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 1
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 1
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{101 1} ]
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 log is now =  [&{<nil> -1} &{101 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 has log =  [&{<nil> -1} &{101 1} ]
+Server 1 log is now =  [&{<nil> -1} &{101 1} ]
+Server 1 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 1
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 1
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{101 1} ]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 log is now =  [&{<nil> -1} &{101 1} ]
+Server 2 has log =  [&{<nil> -1} &{101 1} ]
+Server 1 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 log is now =  [&{<nil> -1} &{101 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 1
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 1
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 1
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 1
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{101 1} ]
+Server 1 log is now =  [&{<nil> -1} &{101 1} ]
+Server 1 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{101 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{101 1} ]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 log is now =  [&{<nil> -1} &{101 1} ]
+Server 1 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 has log =  [&{<nil> -1} &{101 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 1
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 1
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{101 1} ]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 log is now =  [&{<nil> -1} &{101 1} ]
+Server 2 has log =  [&{<nil> -1} &{101 1} ]
+Server 1 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 log is now =  [&{<nil> -1} &{101 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 1
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 1
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{101 1} ]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 log is now =  [&{<nil> -1} &{101 1} ]
+Server 1 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 has log =  [&{<nil> -1} &{101 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Disconnecting peer  1
+Checking agreement with one disconnected peer
+Start called on Server 2 with command= 102
+Start called on Server 0 with command= 102
+Server 0 entered DoAgreement with command 102  ***********************************
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 1, PrevLogTerm = 1, Entries = [&{102 1} ], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{101 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} &{102 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 popped reply= &{1 true 2} from appendEntriesCh for command =  102
+Server 0 received a majority of success=true from other servers, going to commit and apply to state machine
+Server 0 commit index incremented from 1 to 2
+Server 0 in DoRulesForAllServers, lastApplied = 2 log= [&{<nil> -1} &{101 1} &{102 1} ] rf.commitIndex =  2
+Server 0 applied ApplyMsg =  {2 102} to state machine
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 2
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 2
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 2]
+Server 2 has log =  [&{<nil> -1} &{101 1} &{102 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} &{102 1} ]
+Server 2 updated commit index from 1 to 2
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 in DoRulesForAllServers, lastApplied = 2 log= [&{<nil> -1} &{101 1} &{102 1} ] rf.commitIndex =  2
+Server 2 applied ApplyMsg =  {2 102} to state machine
+Start called on Server 2 with command= 103
+Start called on Server 0 with command= 103
+Server 0 entered DoAgreement with command 103  ***********************************
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 2, PrevLogTerm = 1, Entries = [&{103 1} ], LeaderCommit = 2]
+Server 2 has log =  [&{<nil> -1} &{101 1} &{102 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 popped reply= &{1 true 2} from appendEntriesCh for command =  103
+Server 0 received a majority of success=true from other servers, going to commit and apply to state machine
+Server 0 commit index incremented from 2 to 3
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 3
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 3
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 3]
+Server 2 has log =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 updated commit index from 2 to 3
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 in DoRulesForAllServers, lastApplied = 3 log= [&{<nil> -1} &{101 1} &{102 1} &{103 1} ] rf.commitIndex =  3
+Server 0 applied ApplyMsg =  {3 103} to state machine
+Server 2 in DoRulesForAllServers, lastApplied = 3 log= [&{<nil> -1} &{101 1} &{102 1} &{103 1} ] rf.commitIndex =  3
+Server 2 applied ApplyMsg =  {3 103} to state machine
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 3
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 3
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 3]
+Server 2 has log =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 3
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 3
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 3]
+Server 2 has log =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 3
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 3
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 3]
+Server 2 has log =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 3
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 3
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 3]
+Server 2 has log =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 3
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 3
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 3]
+Server 2 has log =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 timed out, follower -> candidate updating cur term from  1 to 2
+Server 1 sent votes out with args =  &{2 1 0 0}
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 3
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 3
+Server 1 is a candidate
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 3]
+Server 2 has log =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 3
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 3
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 3]
+Server 2 has log =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 3
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 3
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 3]
+Server 2 has log =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 is a candidate
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 3
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 3
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 3]
+Server 2 has log =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 is a candidate
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 3
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 3
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 3]
+Server 2 has log =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 is a candidate
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 3
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 3
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 3]
+Server 2 has log =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 sent votes out with args =  &{2 1 0 0}
+Server 1 is a candidate
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 3
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 3
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 3]
+Server 2 has log =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 is a candidate
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 3
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 3
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 3]
+Server 2 has log =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 is a candidate
+Server 1 is a candidate
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 3
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 3
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 3]
+Server 2 has log =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 is a candidate
+Server 1 sent votes out with args =  &{2 1 0 0}
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 3
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 3
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 3
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 3
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 3]
+Server 2 has log =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 3]
+Server 2 log is now =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 has log =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 is a candidate
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 3
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 3
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 3]
+Server 2 has log =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 3
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 3
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 3]
+Server 2 has log =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 is a candidate
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 3
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 3
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 3]
+Server 1 is a candidate
+Server 2 has log =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 3
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 3
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 3]
+Server 2 has log =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 is a candidate
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 3
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 3
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 3]
+Server 2 has log =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 is a candidate
+Start called on Server 2 with command= 104
+Start called on Server 0 with command= 104
+Server 0 entered DoAgreement with command 104  ***********************************
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 3, PrevLogTerm = 1, Entries = [&{104 1} ], LeaderCommit = 3]
+Server 2 has log =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} &{104 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 popped reply= &{1 true 2} from appendEntriesCh for command =  104
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 3
+Server 0 received a majority of success=true from other servers, going to commit and apply to state machine
+Server 0 commit index incremented from 3 to 4
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 3
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 3]
+Server 2 has log =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} &{104 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} &{104 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 is a candidate
+Server 0 in DoRulesForAllServers, lastApplied = 4 log= [&{<nil> -1} &{101 1} &{102 1} &{103 1} &{104 1} ] rf.commitIndex =  4
+Server 0 applied ApplyMsg =  {4 104} to state machine
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 4
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 4
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 4]
+Server 2 has log =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} &{104 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} &{104 1} ]
+Server 2 updated commit index from 3 to 4
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 is a candidate
+Server 2 in DoRulesForAllServers, lastApplied = 4 log= [&{<nil> -1} &{101 1} &{102 1} &{103 1} &{104 1} ] rf.commitIndex =  4
+Server 2 applied ApplyMsg =  {4 104} to state machine
+Start called on Server 2 with command= 105
+Start called on Server 0 with command= 105
+Server 0 entered DoAgreement with command 105  ***********************************
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 4, PrevLogTerm = 1, Entries = [&{105 1} ], LeaderCommit = 4]
+Server 2 has log =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} &{104 1} ]
+Server 1 is a candidate
+Server 2 log is now =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} &{104 1} &{105 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 popped reply= &{1 true 2} from appendEntriesCh for command =  105
+Server 0 received a majority of success=true from other servers, going to commit and apply to state machine
+Server 0 commit index incremented from 4 to 5
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 5
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 5
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 5]
+Server 2 has log =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} &{104 1} &{105 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} &{104 1} &{105 1} ]
+Server 2 updated commit index from 4 to 5
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 sent votes out with args =  &{2 1 0 0}
+Server 2 in DoRulesForAllServers, lastApplied = 5 log= [&{<nil> -1} &{101 1} &{102 1} &{103 1} &{104 1} &{105 1} ] rf.commitIndex =  5
+Server 2 applied ApplyMsg =  {5 105} to state machine
+Server 0 sending a heartbeat to peer 1 with LeaderCommit 5
+Server 0 sending a heartbeat to peer 2 with LeaderCommit 5
+Server 0 in DoRulesForAllServers, lastApplied = 5 log= [&{<nil> -1} &{101 1} &{102 1} &{103 1} &{104 1} &{105 1} ] rf.commitIndex =  5
+Server 0 applied ApplyMsg =  {5 105} to state machine
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 5]
+Server 2 has log =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} &{104 1} &{105 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} &{104 1} &{105 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 is a candidate
+Checking with one reconnected server
+Start called on Server 1 with command= 106
+Start called on Server 2 with command= 106
+Start called on Server 0 with command= 106
+Server 0 entered DoAgreement with command 106  ***********************************
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 1, PrevLogTerm = 1, Entries = [&{106 1} ], LeaderCommit = 5]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 5, PrevLogTerm = 1, Entries = [&{106 1} ], LeaderCommit = 5]
+Server 1 has log =  [&{<nil> -1} &{101 1} ]
+Server 1 has higher term than args.Term, replying false, args.Term =  1 rf.Term =  2
+Server 2 has log =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} &{104 1} &{105 1} ]
+Server 2 log is now =  [&{<nil> -1} &{101 1} &{102 1} &{103 1} &{104 1} &{105 1} &{106 1} ]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 popped reply= &{1 true 2} from appendEntriesCh for command =  106
+Server 0 received a majority of success=true from other servers, going to commit and apply to state machine
+Server 0 commit index incremented from 5 to 6
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 0, PrevLogIndex = 0, PrevLogTerm = -1, Entries = [&{101 1} &{106 1} ], LeaderCommit = 5]
+Server 1 has log =  [&{<nil> -1} &{101 1} ]
+Server 1 has higher term than args.Term, replying false, args.Term =  1 rf.Term =  2
+exit status 2
+FAIL	github.com/cmu440/raft	2.277s

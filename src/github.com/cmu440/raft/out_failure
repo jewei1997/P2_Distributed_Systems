@@ -1,0 +1,883 @@
+TEST: ==================== 5 SERVERS ====================
+TEST: (2B): no agreement without majority
+TEST: Checking agreement
+Start called on Server 1 with command= 10
+Start called on Server 2 with command= 10
+Start called on Server 3 with command= 10
+Start called on Server 4 with command= 10
+Start called on Server 0 with command= 10
+Start called on Server 1 with command= 10
+Start called on Server 2 with command= 10
+Start called on Server 3 with command= 10
+Start called on Server 4 with command= 10
+Start called on Server 0 with command= 10
+Start called on Server 1 with command= 10
+Start called on Server 2 with command= 10
+Start called on Server 3 with command= 10
+Start called on Server 4 with command= 10
+Start called on Server 0 with command= 10
+Start called on Server 1 with command= 10
+Start called on Server 2 with command= 10
+Start called on Server 3 with command= 10
+Start called on Server 4 with command= 10
+Start called on Server 0 with command= 10
+Server 3 timed out, follower -> candidate updating cur term from  0 to 1
+Start called on Server 1 with command= 10
+Start called on Server 2 with command= 10
+Start called on Server 3 with command= 10
+Start called on Server 4 with command= 10
+Start called on Server 0 with command= 10
+Server 3 sent votes out with args =  &{1 3 0 -1}
+peer 0 pushed &{0 1 true} into votesCh
+Server 3 candidate -> leader ....................................
+peer 4 pushed &{0 1 true} into votesCh
+Server 3 log is =  [&{<nil> -1} ] commit index =  0
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 0]
+Server 4 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 0]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 0]
+Server 0 has log =  [&{<nil> -1} ]  commit index =  0
+Server 4 has log =  [&{<nil> -1} ]  commit index =  0
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 0]
+Server 2 has log =  [&{<nil> -1} ]  commit index =  0
+Server 0 log is now =  [&{<nil> -1} ] commitIndex =  0
+Server 4 log is now =  [&{<nil> -1} ] commitIndex =  0
+Server 1 has log =  [&{<nil> -1} ]  commit index =  0
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 log is now =  [&{<nil> -1} ] commitIndex =  0
+Server 4 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 log is now =  [&{<nil> -1} ] commitIndex =  0
+Server 1 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Start called on Server 1 with command= 10
+Start called on Server 2 with command= 10
+Start called on Server 3 with command= 10
+Server 3 entered DoAgreement with command 10  ***********************************
+Server 3 sending appending entries to Server 0 with PrevLogIndex =  0
+Server 3 sending appending entries to Server 1 with PrevLogIndex =  0
+Server 3 sending appending entries to Server 2 with PrevLogIndex =  0
+Server 3 sending appending entries to Server 4 with PrevLogIndex =  0
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = -1, Entries = [&{10 1} ], LeaderCommit = 0]
+Server 0 has log =  [&{<nil> -1} ]  commit index =  0
+Server 0 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  0
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = -1, Entries = [&{10 1} ], LeaderCommit = 0]
+Server 1 has log =  [&{<nil> -1} ]  commit index =  0
+Server 1 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  0
+Server 1 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = -1, Entries = [&{10 1} ], LeaderCommit = 0]
+Server 2 has log =  [&{<nil> -1} ]  commit index =  0
+Server 4 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = -1, Entries = [&{10 1} ], LeaderCommit = 0]
+Server 4 has log =  [&{<nil> -1} ]  commit index =  0
+Server 2 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  0
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 3 popped reply= &{1 true 0} from appendEntriesCh for command =  10
+Server 4 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  0
+Server 4 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 3 popped reply= &{1 true 1} from appendEntriesCh for command =  10
+Server 3 received a majority of success=true from other servers, going to commit and apply to state machine
+Server 3 commit index incremented from 0 to 1
+Server 3 popped reply= &{1 true 2} from appendEntriesCh for command =  10
+Server 3 popped reply= &{1 true 4} from appendEntriesCh for command =  10
+Server 3 exiting DoAgreement for command= 10
+Server 3 in DoRulesForAllServers, lastApplied = 1 log= [&{<nil> -1} &{10 1} ] rf.commitIndex =  1
+Server 3 applied ApplyMsg =  {1 10} to state machine
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 0 has log =  [&{<nil> -1} &{10 1} ]  commit index =  0
+Server 2 has log =  [&{<nil> -1} &{10 1} ]  commit index =  0
+Server 1 has log =  [&{<nil> -1} &{10 1} ]  commit index =  0
+Server 0 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  0
+Server 2 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  0
+Server 1 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  0
+Server 2 updated commit index from 0 to 1
+Server 0 updated commit index from 0 to 1
+Server 1 updated commit index from 0 to 1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 4 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 4 has log =  [&{<nil> -1} &{10 1} ]  commit index =  0
+Server 4 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  0
+Server 4 updated commit index from 0 to 1
+Server 4 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 in DoRulesForAllServers, lastApplied = 1 log= [&{<nil> -1} &{10 1} ] rf.commitIndex =  1
+Server 0 applied ApplyMsg =  {1 10} to state machine
+Server 1 in DoRulesForAllServers, lastApplied = 1 log= [&{<nil> -1} &{10 1} ] rf.commitIndex =  1
+Server 1 applied ApplyMsg =  {1 10} to state machine
+Server 2 in DoRulesForAllServers, lastApplied = 1 log= [&{<nil> -1} &{10 1} ] rf.commitIndex =  1
+Server 2 applied ApplyMsg =  {1 10} to state machine
+Server 4 in DoRulesForAllServers, lastApplied = 1 log= [&{<nil> -1} &{10 1} ] rf.commitIndex =  1
+Server 4 applied ApplyMsg =  {1 10} to state machine
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 4 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 4 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 2 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 4 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 1 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 0 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 4 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 0 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 0 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 1 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 1 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 4 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 4 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 4 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 4 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 4 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 4 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 4 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 4 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 1 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 1 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 0 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 1 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 1 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 1 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 4 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 4 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 4 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 4 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 0 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 0 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 4 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 1 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 4 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 4 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 4 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 0 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 0 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 1 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 4 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 4 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 2 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 4 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 4 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 0 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 0 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 4 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 4 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 4 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 2 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 4 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 0 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 0 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 1 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 0 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 4 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 4 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 4 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 2 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 4 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 4 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 4 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 4 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 4 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 1 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 1 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 0 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 1 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 0 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 0 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 1 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 4 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 4 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 4 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 4 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+TEST: Servers 4 0 1 disconnected
+TEST: Disconnected 3 out of 5 peers
+Start called on Server 3 with command= 20
+Server 3 entered DoAgreement with command 20  ***********************************
+Server 3 sending appending entries to Server 0 with PrevLogIndex =  1
+Server 3 sending appending entries to Server 1 with PrevLogIndex =  1
+Server 3 sending appending entries to Server 2 with PrevLogIndex =  1
+Server 3 sending appending entries to Server 4 with PrevLogIndex =  1
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 1, PrevLogTerm = 1, Entries = [&{20 1} ], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 3 popped reply= &{1 true 2} from appendEntriesCh for command =  20
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 timed out, follower -> candidate updating cur term from  1 to 2
+Server 0 sent votes out with args =  &{2 0 1 1}
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 is a candidate
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 is a candidate
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 is a candidate
+Server 1 timed out, follower -> candidate updating cur term from  1 to 2
+Server 1 sent votes out with args =  &{2 1 1 1}
+Server 0 is a candidate
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 4 timed out, follower -> candidate updating cur term from  1 to 2
+Server 4 sent votes out with args =  &{2 4 1 1}
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 is a candidate
+Server 0 is a candidate
+Server 0 sent votes out with args =  &{2 0 1 1}
+Server 4 is a candidate
+Server 1 is a candidate
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 is a candidate
+Server 4 is a candidate
+Server 1 is a candidate
+Server 0 is a candidate
+Server 4 is a candidate
+Server 1 is a candidate
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 sent votes out with args =  &{2 1 1 1}
+Server 0 is a candidate
+Server 4 is a candidate
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 is a candidate
+Server 0 is a candidate
+Server 4 is a candidate
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 is a candidate
+Server 0 is a candidate
+Server 4 is a candidate
+Server 1 is a candidate
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 is a candidate
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 4 is a candidate
+Server 4 sent votes out with args =  &{2 4 1 1}
+Server 0 sent votes out with args =  &{2 0 1 1}
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 is a candidate
+Server 4 is a candidate
+Server 0 is a candidate
+Server 1 is a candidate
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 4 is a candidate
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 is a candidate
+Server 1 is a candidate
+Server 1 sent votes out with args =  &{2 1 1 1}
+Server 4 is a candidate
+Server 0 is a candidate
+Server 1 is a candidate
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 4 is a candidate
+Server 0 is a candidate
+Server 1 is a candidate
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 4 is a candidate
+Server 0 is a candidate
+Server 1 is a candidate
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 4 is a candidate
+Server 0 is a candidate
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 1 is a candidate
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 4 is a candidate
+Server 0 is a candidate
+Server 1 sent votes out with args =  &{2 1 1 1}
+Server 0 sent votes out with args =  &{2 0 1 1}
+Server 4 is a candidate
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 4 sent votes out with args =  &{2 4 1 1}
+Server 1 is a candidate
+Server 0 is a candidate
+Server 4 is a candidate
+Server 1 is a candidate
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 is a candidate
+Server 4 is a candidate
+Server 1 is a candidate
+Server 0 is a candidate
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 4 is a candidate
+Server 1 is a candidate
+Server 0 is a candidate
+Server 4 is a candidate
+Server 1 is a candidate
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 is a candidate
+Server 0 sent votes out with args =  &{2 0 1 1}
+Server 4 is a candidate
+Server 1 is a candidate
+Server 0 is a candidate
+Server 4 sent votes out with args =  &{2 4 1 1}
+Server 1 sent votes out with args =  &{2 1 1 1}
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 is a candidate
+Server 4 is a candidate
+Server 1 is a candidate
+Server 0 is a candidate
+Server 4 is a candidate
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 is a candidate
+Server 0 is a candidate
+Server 4 is a candidate
+Server 1 is a candidate
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 is a candidate
+Server 4 is a candidate
+Server 1 is a candidate
+Server 0 is a candidate
+Server 4 is a candidate
+Server 1 is a candidate
+Server 0 sent votes out with args =  &{2 0 1 1}
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 sent votes out with args =  &{2 1 1 1}
+Server 4 is a candidate
+Server 0 is a candidate
+Server 1 is a candidate
+Server 4 sent votes out with args =  &{2 4 1 1}
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 is a candidate
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 is a candidate
+Server 4 is a candidate
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 is a candidate
+Server 1 is a candidate
+Server 4 is a candidate
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 0 is a candidate
+TEST: Servers 4 0 1 reconnected
+TEST: Reconnected all peers
+Server 1 is a candidate
+Server 4 is a candidate
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 0 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 0 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 0 responding with reply = AppendEntriesReply[Term = 2, Success = true]
+Server 0 candidate -> follower
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 2 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 2 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 1 responding with reply = AppendEntriesReply[Term = 2, Success = true]
+Server 2 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 2 responding with reply = AppendEntriesReply[Term = 1, Success = true]
+Server 1 candidate -> follower
+Server 3 leader -> follower
+Server 4 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 4 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 4 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 4 responding with reply = AppendEntriesReply[Term = 2, Success = true]
+Server 4 candidate -> follower
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 1 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 1 responding with reply = AppendEntriesReply[Term = 2, Success = true]
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 1 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 1 responding with reply = AppendEntriesReply[Term = 2, Success = true]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 0 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 0 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 0 responding with reply = AppendEntriesReply[Term = 2, Success = true]
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 1 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 1 responding with reply = AppendEntriesReply[Term = 2, Success = true]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 0 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 0 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 0 responding with reply = AppendEntriesReply[Term = 2, Success = true]
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 1 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 1 responding with reply = AppendEntriesReply[Term = 2, Success = true]
+Server 4 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 4 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 4 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 4 responding with reply = AppendEntriesReply[Term = 2, Success = true]
+Server 4 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 4 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 4 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 4 responding with reply = AppendEntriesReply[Term = 2, Success = true]
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 1 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 1 responding with reply = AppendEntriesReply[Term = 2, Success = true]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 0 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 0 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 0 responding with reply = AppendEntriesReply[Term = 2, Success = true]
+Server 2 timed out, follower -> candidate updating cur term from  1 to 2
+Server 2 sent votes out with args =  &{2 2 2 1}
+peer 0 pushed &{2 2 false} into votesCh
+Server 2 voting for server with higher term, candidate -> follower
+Server 4 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 4 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 4 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 4 responding with reply = AppendEntriesReply[Term = 2, Success = true]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 0 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 0 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 0 responding with reply = AppendEntriesReply[Term = 2, Success = true]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 0 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 0 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 0 responding with reply = AppendEntriesReply[Term = 2, Success = true]
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 1 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 1 responding with reply = AppendEntriesReply[Term = 2, Success = true]
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 1 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 1 responding with reply = AppendEntriesReply[Term = 2, Success = true]
+Server 4 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 4 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 4 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 4 responding with reply = AppendEntriesReply[Term = 2, Success = true]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 0 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 0 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 0 responding with reply = AppendEntriesReply[Term = 2, Success = true]
+Server 4 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 4 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 4 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 4 responding with reply = AppendEntriesReply[Term = 2, Success = true]
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 1 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 1 responding with reply = AppendEntriesReply[Term = 2, Success = true]
+Server 4 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 4 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 4 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 4 responding with reply = AppendEntriesReply[Term = 2, Success = true]
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 1 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 1 responding with reply = AppendEntriesReply[Term = 2, Success = true]
+Server 2 timed out, follower -> candidate updating cur term from  2 to 3
+peer 3 pushed &{2 2 false} into votesCh
+peer 4 pushed &{2 2 false} into votesCh
+peer 1 pushed &{2 2 false} into votesCh
+Server 2 sent votes out with args =  &{3 2 2 1}
+peer 0 pushed &{2 3 true} into votesCh
+peer 1 pushed &{2 3 true} into votesCh
+Server 2 candidate -> leader ....................................
+Server 2 log is =  [&{<nil> -1} &{10 1} &{20 1} ] commit index =  1
+Server 4 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 4 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 0 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 4 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 0 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 4 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 0 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 0 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 1 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 3 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 3 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 1 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 3 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 1 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 4 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 3 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 4 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 4 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 4 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 0 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 0 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 0 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 0 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 0 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 0 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 0 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 1 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 1 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 0 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 0 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 0 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 0 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 3 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 3 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 4 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 3 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 3 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 4 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 1 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 4 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 1 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 4 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 1 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 1 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 1 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 1 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 1 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 1 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 0 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 0 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 1 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 0 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 0 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 3 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 4 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 3 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 4 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 4 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 3 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 4 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 3 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 1 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 1 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 1 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 3 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 0 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 3 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 0 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 3 log is now =  [&{<nil> -1} &{10 1} &{20 1} ] commitIndex =  1
+Server 4 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 3 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 0 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 4 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 0 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 4 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 4 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 4 received args = AppendEntriesArgs[Term = 1, LeaderId = 3, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 1]
+Server 4 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 4 log is now =  [&{<nil> -1} &{10 1} ] commitIndex =  1
+Server 4 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Start called on Server 2 with command= 30
+TEST: Checking agreement
+Start called on Server 1 with command= 1000
+Start called on Server 2 with command= 1000
+Server 2 entered DoAgreement with command 30  ***********************************
+Server 2 entered DoAgreement with command 1000  ***********************************
+Server 2 sending appending entries to Server 0 with PrevLogIndex =  2
+Server 2 sending appending entries to Server 0 with PrevLogIndex =  2
+Server 2 sending appending entries to Server 1 with PrevLogIndex =  2
+Server 2 sending appending entries to Server 1 with PrevLogIndex =  2
+Server 2 sending appending entries to Server 3 with PrevLogIndex =  2
+Server 2 sending appending entries to Server 3 with PrevLogIndex =  2
+Server 2 sending appending entries to Server 4 with PrevLogIndex =  2
+Server 2 sending appending entries to Server 4 with PrevLogIndex =  2
+Server 0 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 2, PrevLogTerm = 1, Entries = [&{30 3} &{1000 3} ], LeaderCommit = 1]
+Server 0 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 0 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 2, PrevLogTerm = 1, Entries = [&{30 3} ], LeaderCommit = 1]
+Server 0 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 0 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 1, PrevLogTerm = 1, Entries = [&{20 1} &{30 3} &{1000 3} ], LeaderCommit = 1]
+Server 4 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 2, PrevLogTerm = 1, Entries = [&{30 3} &{1000 3} ], LeaderCommit = 1]
+Server 0 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 4 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 0 log is now =  [&{<nil> -1} &{10 1} &{20 1} &{30 3} &{1000 3} ] commitIndex =  1
+Server 0 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 2 popped reply= &{3 true 0} from appendEntriesCh for command =  1000
+Server 1 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 2, PrevLogTerm = 1, Entries = [&{30 3} &{1000 3} ], LeaderCommit = 1]
+Server 4 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 2, PrevLogTerm = 1, Entries = [&{30 3} &{1000 3} ], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 4 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 3 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 2, PrevLogTerm = 1, Entries = [&{30 3} &{1000 3} ], LeaderCommit = 1]
+Server 3 has log =  [&{<nil> -1} &{10 1} &{20 1} ]  commit index =  1
+Server 3 log is now =  [&{<nil> -1} &{10 1} &{20 1} &{30 3} &{1000 3} ] commitIndex =  1
+Server 3 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 3 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 2, PrevLogTerm = 1, Entries = [&{30 3} &{1000 3} ], LeaderCommit = 1]
+Server 3 has log =  [&{<nil> -1} &{10 1} &{20 1} &{30 3} &{1000 3} ]  commit index =  1
+Server 0 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 0, PrevLogTerm = -1, Entries = [&{20 1} &{30 3} ], LeaderCommit = 1]
+Server 0 has log =  [&{<nil> -1} &{10 1} &{20 1} &{30 3} &{1000 3} ]  commit index =  1
+Server 0 log is now =  [&{<nil> -1} &{10 1} &{30 3} ] commitIndex =  1
+Server 0 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 1 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 2, PrevLogTerm = 1, Entries = [&{30 3} &{1000 3} ], LeaderCommit = 1]
+Server 2 popped reply= &{3 true 0} from appendEntriesCh for command =  30
+Server 1 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 4 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 0, PrevLogTerm = -1, Entries = [&{20 1} &{30 3} &{1000 3} ], LeaderCommit = 1]
+Server 4 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 4 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 1, PrevLogTerm = 1, Entries = [&{20 1} &{30 3} &{1000 3} ], LeaderCommit = 1]
+Server 4 log is now =  [&{<nil> -1} &{10 1} &{30 3} &{1000 3} ] commitIndex =  1
+Server 3 log is now =  [&{<nil> -1} &{10 1} &{20 1} &{30 3} &{1000 3} ] commitIndex =  1
+Server 2 popped reply= &{3 true 3} from appendEntriesCh for command =  1000
+Server 3 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 2 received a majority of success=true from other servers, going to commit and apply to state machine
+Server 2 commit index incremented from 1 to 2
+Server 4 has log =  [&{<nil> -1} &{10 1} &{30 3} &{1000 3} ]  commit index =  1
+Server 4 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 2 popped reply= &{3 true 3} from appendEntriesCh for command =  30
+Server 2 received a majority of success=true from other servers, going to commit and apply to state machine
+Server 2 commit index incremented from 2 to 3
+Server 4 log is now =  [&{<nil> -1} &{10 1} &{20 1} &{30 3} &{1000 3} ] commitIndex =  1
+Server 4 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 1 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 1, PrevLogTerm = 1, Entries = [&{20 1} &{30 3} &{1000 3} ], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{10 1} ]  commit index =  1
+Server 1 log is now =  [&{<nil> -1} &{10 1} &{20 1} &{30 3} &{1000 3} ] commitIndex =  1
+Server 1 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 2 popped reply= &{3 true 4} from appendEntriesCh for command =  30
+Server 2 popped reply= &{3 true 4} from appendEntriesCh for command =  1000
+Server 1 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 0, PrevLogTerm = -1, Entries = [&{20 1} &{30 3} &{1000 3} ], LeaderCommit = 1]
+Server 1 has log =  [&{<nil> -1} &{10 1} &{20 1} &{30 3} &{1000 3} ]  commit index =  1
+Server 1 log is now =  [&{<nil> -1} &{10 1} &{30 3} &{1000 3} ] commitIndex =  1
+Server 1 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 2 popped reply= &{3 true 1} from appendEntriesCh for command =  1000
+Server 2 exiting DoAgreement for command= 1000
+Server 2 popped reply= &{3 true 1} from appendEntriesCh for command =  30
+Server 2 exiting DoAgreement for command= 30
+Server 1 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 3]
+Server 1 has log =  [&{<nil> -1} &{10 1} &{30 3} &{1000 3} ]  commit index =  1
+Server 4 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 3]
+Server 1 log is now =  [&{<nil> -1} &{10 1} &{30 3} &{1000 3} ] commitIndex =  1
+Server 1 updated commit index from 1 to 3
+Server 4 has log =  [&{<nil> -1} &{10 1} &{20 1} &{30 3} &{1000 3} ]  commit index =  1
+Server 0 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 3]
+Server 1 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 0 has log =  [&{<nil> -1} &{10 1} &{30 3} ]  commit index =  1
+Server 4 log is now =  [&{<nil> -1} &{10 1} &{20 1} &{30 3} &{1000 3} ] commitIndex =  1
+Server 4 updated commit index from 1 to 3
+Server 4 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 0 log is now =  [&{<nil> -1} &{10 1} &{30 3} ] commitIndex =  1
+Server 0 updated commit index from 1 to 2
+Server 0 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 3 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 3]
+Server 3 has log =  [&{<nil> -1} &{10 1} &{20 1} &{30 3} &{1000 3} ]  commit index =  1
+Server 3 log is now =  [&{<nil> -1} &{10 1} &{20 1} &{30 3} &{1000 3} ] commitIndex =  1
+Server 4 in DoRulesForAllServers, lastApplied = 2 log= [&{<nil> -1} &{10 1} &{20 1} &{30 3} &{1000 3} ] rf.commitIndex =  3
+Server 3 updated commit index from 1 to 3
+Server 4 applied ApplyMsg =  {2 20} to state machine
+Server 3 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 3 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 3]
+Server 3 has log =  [&{<nil> -1} &{10 1} &{20 1} &{30 3} &{1000 3} ]  commit index =  3
+Server 1 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 3]
+Server 3 log is now =  [&{<nil> -1} &{10 1} &{20 1} &{30 3} &{1000 3} ] commitIndex =  3
+Server 3 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 1 has log =  [&{<nil> -1} &{10 1} &{30 3} &{1000 3} ]  commit index =  3
+Server 1 log is now =  [&{<nil> -1} &{10 1} &{30 3} &{1000 3} ] commitIndex =  3
+Server 1 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 0 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 3]
+Server 0 has log =  [&{<nil> -1} &{10 1} &{30 3} ]  commit index =  2
+Server 4 received args = AppendEntriesArgs[Term = 3, LeaderId = 2, PrevLogIndex = 0, PrevLogTerm = 0, Entries = [], LeaderCommit = 3]
+Server 0 log is now =  [&{<nil> -1} &{10 1} &{30 3} ] commitIndex =  2
+Server 0 updated commit index from 2 to 2
+Server 4 has log =  [&{<nil> -1} &{10 1} &{20 1} &{30 3} &{1000 3} ]  commit index =  3
+Server 0 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 4 log is now =  [&{<nil> -1} &{10 1} &{20 1} &{30 3} &{1000 3} ] commitIndex =  3
+Server 4 responding with reply = AppendEntriesReply[Term = 3, Success = true]
+Server 2 in DoRulesForAllServers, lastApplied = 2 log= [&{<nil> -1} &{10 1} &{20 1} &{30 3} &{1000 3} ] rf.commitIndex =  3
+Server 2 applied ApplyMsg =  {2 20} to state machine
+Server 3 in DoRulesForAllServers, lastApplied = 2 log= [&{<nil> -1} &{10 1} &{20 1} &{30 3} &{1000 3} ] rf.commitIndex =  3
+Server 0 in DoRulesForAllServers, lastApplied = 2 log= [&{<nil> -1} &{10 1} &{30 3} ] rf.commitIndex =  2
+Server 1 in DoRulesForAllServers, lastApplied = 2 log= [&{<nil> -1} &{10 1} &{30 3} &{1000 3} ] rf.commitIndex =  3
+Server 3 applied ApplyMsg =  {2 20} to state machine
+Server 0 applied ApplyMsg =  {2 30} to state machine
+Server 1 applied ApplyMsg =  {2 30} to state machine
+exit status 1
+FAIL	github.com/cmu440/raft	3.915s
